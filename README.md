@@ -92,6 +92,16 @@ See `LICENSE` for details or contact the author for other use cases.
 Feel free to open issues or submit pull requests!
 
 ---
+## 💖 Support
 
-## 📝 Disclaimer
-Use at your own risk. The system is designed as a non-invasive add-on and makes no changes to the machine’s internals.
+If you find this project helpful and would like to support its development, consider buying me a coffee:
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?logo=buymeacoffee&logoColor=black&style=for-the-badge)](https://www.buymeacoffee.com/caijonas404)
+
+Thank you for your support! ☕😊
+
+##⚠️ **Warning / Disclaimer**
+
+- This project involves working with high voltage and mechanical components. Improper handling may lead to electric shock, injury, or damage to the equipment.
+- Modifying your machine will likely void any manufacturer warranty.
+- You are responsible for any risks or consequences. Proceed only if you have experience with electronics and high-voltage systems.
