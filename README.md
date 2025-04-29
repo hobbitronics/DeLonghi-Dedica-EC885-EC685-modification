@@ -40,6 +40,7 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 | **Solder Nuts M2.5**                            | 2            | M2.5, suitable for the screws                                 | For a permanent and secure connection of the screws                  |
 | **Power Supply Option 1 (EPLZON 12V)**          | 1            | EPLZON 12V/DC 6W Mini LED Transformer                         | Provides 12V DC power                                                |
 | **Power Supply Option 2 (Meanwell IRM-03-12S)** | 1            | Meanwell IRM-03-12S, 12V DC, 3W                               | Provides 12V DC power, alternative to EPLZON                         |
+| **Piggyback Flat Connectors**                   | 2            | Flat push-on type with additional tab (e.g., 6.3 mm)          | For daisy-chaining power connections                                 |
 
 
 ---
