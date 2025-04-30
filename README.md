@@ -24,6 +24,7 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 ---
 
 
+
 ## 📦 Bill of Materials (BOM)
 
 | **Component**                                   | **Quantity** | **Specification**                                             | **Notes**                                                            |
@@ -33,6 +34,7 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 | **Resistor (100kΩ)**                            | 1            | 100kΩ, 1/4W                                                   | For voltage divider with the thermistor                              |
 | **Thermistor (ATC Semitec 104GT-2)**            | 1            | 10kΩ @ 25°C (NTC)                                             | Temperature sensor                                                   |
 | **G1/4" Pressure Sensor (DC 5V)**               | 1            | Stainless steel, 0-300 PSI, analog output                     | Pressure sensor for water, air, gas, or heating oil                  |
+| **T-Steckanschluss, Innengew. G 1/4"-4mm, IQS-MSV** | 1         | G 1/4" internal thread, 4mm hose connector                    | Pneumatic T-fitting for sensor integration                          |
 | **Hailege 5pcs NANO IO Shield DIY Kit**         | 1            | DIY Kit for Arduino Nano (5 pieces)                           | IO expansion board for Arduino Nano                                  |
 | **Wires**                                       | -            | Various lengths                                               | For connecting components                                            |
 | **WAGO 2-pin Connector**                        | 2            | -                                                             | For quick and secure wire connections                                |
@@ -41,7 +43,6 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 | **Power Supply Option 1 (EPLZON 12V)**          | 1            | EPLZON 12V/DC 6W Mini LED Transformer                         | Provides 12V DC power                                                |
 | **Power Supply Option 2 (Meanwell IRM-03-12S)** | 1            | Meanwell IRM-03-12S, 12V DC, 3W                               | Provides 12V DC power, alternative to EPLZON                         |
 | **Piggyback Flat Connectors**                   | 2            | Flat push-on type with additional tab (e.g., 6.3 mm)          | For daisy-chaining power connections                                 |
-
 
 ---
 
