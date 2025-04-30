@@ -17,7 +17,6 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 - **Temperature display** *(optional)*: Shows current and maximum water temperature while brewing.
 - **Post-shot analysis**: After extraction, the display shows average pressure and temperature values.
 - **OLED display**: Compact 128x64 I2C screen for clear and minimalistic visualization.
-- **One-button operation**: Single push button for reset/start — intuitive and simple.
 - **Standalone system**: Powered by USB, does not interfere with the machine’s electronics.
 - **3D-printed mounting**: Reuses existing logo mounting holes — no drilling required.
 
