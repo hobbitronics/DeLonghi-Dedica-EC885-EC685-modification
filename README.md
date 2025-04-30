@@ -27,24 +27,23 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 
 ## 📦 Bill of Materials (BOM)
 
-| **Component**                                   | **Quantity** | **Specification**                                             | **Notes**                                                            |
-|-------------------------------------------------|--------------|---------------------------------------------------------------|----------------------------------------------------------------------|
-| **Arduino (e.g., Uno, Nano)**                   | 1            | -                                                             | Microcontroller                                                      |
-| **OLED Display**                                | 1            | 0.96" I2C OLED Display, 128x64                                | I2C compatible                                                       |
-| **Resistor (100kΩ)**                            | 1            | 100kΩ, 1/4W                                                   | For voltage divider with the thermistor                              |
-| **Thermistor (ATC Semitec 104GT-2)**            | 1            | 10kΩ @ 25°C (NTC)                                             | Temperature sensor                                                   |
-| **G1/4" Pressure Sensor (DC 5V)**               | 1            | Stainless steel, 0-300 PSI, analog output                     | Pressure sensor for water, air, gas, or heating oil                  |
-| **T-Steckanschluss, Innengew. G 1/4"-4mm, IQS-MSV** | 1         | G 1/4" internal thread, 4mm hose connector                    | Pneumatic T-fitting for sensor integration                          |
-| **Hailege 5pcs NANO IO Shield DIY Kit**         | 1            | DIY Kit for Arduino Nano (5 pieces)                           | IO expansion board for Arduino Nano                                  |
-| **Wires**                                       | -            | Various lengths                                               | For connecting components                                            |
-| **WAGO 2-pin Connector**                        | 2            | -                                                             | For quick and secure wire connections                                |
-| **Screws M2.5x12mm**                            | 2            | M2.5, Length: 12mm                                            | For securing components                                              |
-| **Solder Nuts M2.5**                            | 2            | M2.5, suitable for the screws                                 | For a permanent and secure connection of the screws                  |
-| **Power Supply Option 1 (EPLZON 12V)**          | 1            | EPLZON 12V/DC 6W Mini LED Transformer                         | Provides 12V DC power                                                |
-| **Power Supply Option 2 (Meanwell IRM-03-12S)** | 1            | Meanwell IRM-03-12S, 12V DC, 3W                               | Provides 12V DC power, alternative to EPLZON                         |
-| **Piggyback Flat Connectors**                   | 2            | Flat push-on type with additional tab (e.g., 6.3 mm)          | For daisy-chaining power connections                                 |
+| **Component**                                   | **Quantity** | **Specification**                                             | **Notes**                                                            | **Link**                    |
+|-------------------------------------------------|--------------|---------------------------------------------------------------|----------------------------------------------------------------------|-----------------------------|
+| **Arduino (e.g., Uno, Nano)**                   | 1            | -                                                             | Microcontroller                                                      | [Link](https://example.com/arduino-nano) |
+| **OLED Display**                                | 1            | 0.96" I2C OLED Display, 128x64                                | I2C compatible                                                       | [Link](https://example.com/oled-display) |
+| **Resistor (100kΩ)**                            | 1            | 100kΩ, 1/4W                                                   | For voltage divider with the thermistor                              | [Link](https://example.com/resistor-100k) |
+| **Thermistor (ATC Semitec 104GT-2)**            | 1            | 10kΩ @ 25°C (NTC)                                             | Temperature sensor                                                   | [Link](https://example.com/thermistor-104gt2) |
+| **G1/4" Pressure Sensor (DC 5V)**               | 1            | Stainless steel, 0-300 PSI, analog output                     | Pressure sensor for water, air, gas, or heating oil                  | [Link](https://example.com/pressure-sensor) |
+| **T-Steckanschluss, Innengew. G 1/4"-4mm, IQS-MSV** | 1         | G 1/4" internal thread, 4mm hose connector                    | Pneumatic T-fitting for sensor integration                          | [Link]([https://example.com/t-steckanschluss](https://www.landefeld.de/artikel/de/t-steckanschluss-innengew-g-14-4mm-iqs-msv-standard-/IQSTFF%20144%20MSV)) |
+| **Hailege 5pcs NANO IO Shield DIY Kit**         | 1            | DIY Kit for Arduino Nano (5 pieces)                           | IO expansion board for Arduino Nano                                  | [Link](https://example.com/nano-io-shield) |
+| **Wires**                                       | -            | Various lengths                                               | For connecting components                                            | [Link](https://example.com/jumper-wires) |
+| **WAGO 2-pin Connector**                        | 2            | -                                                             | For quick and secure wire connections                                | [Link](https://example.com/wago-connector) |
+| **Screws M2.5x12mm**                            | 2            | M2.5, Length: 12mm                                            | For securing components                                              | [Link](https://example.com/m2.5-screw) |
+| **Solder Nuts M2.5**                            | 2            | M2.5, suitable for the screws                                 | For a permanent and secure connection of the screws                  | [Link](https://example.com/m2.5-nuts) |
+| **Power Supply Option 1 (EPLZON 12V)**          | 1            | EPLZON 12V/DC 6W Mini LED Transformer                         | Provides 12V DC power                                                | [Link](https://example.com/eplzon-12v) |
+| **Power Supply Option 2 (Meanwell IRM-03-12S)** | 1            | Meanwell IRM-03-12S, 12V DC, 3W                               | Provides 12V DC power, alternative to EPLZON                         | [Link](https://example.com/meanwell-irm-03-12s) |
+| **Piggyback Flat Connectors**                   | 2            | Flat push-on type with additional tab (e.g., 6.3 mm)          | For daisy-chaining power connections                                 | [Link](https://example.com/piggyback-connectors) |
 
----
 
 ## 🔧 Wiring Diagram
 Basic wiring instructions:
