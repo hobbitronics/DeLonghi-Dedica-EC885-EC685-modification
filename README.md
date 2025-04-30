@@ -12,7 +12,7 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 ## ✨ Features
 
 - **Non-invasive monitoring**: The machine remains unmodified — no soldering, no drilling, and 100% reversible installation.
-- **Real-time shot timer**: Accurately displays extraction duration from the moment the pump starts.
+- **Real-time shot timer**: Accurately displays extraction duration from the moment the pressure is high enough and the extraction starts.
 - **Pressure measurement**: Displays current and maximum brewing pressure during extraction.
 - **Temperature display** *(optional)*: Shows current and maximum water temperature while brewing.
 - **Post-shot analysis**: After extraction, the display shows average pressure and temperature values.
@@ -31,7 +31,7 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 | **Arduino Nano**                                | 1         | Mikrocontroller                                               | Kompatibel mit ATmega328P                                                | [Arduino Nano – Arduino Store](https://store.arduino.cc/products/arduino-nano) |
 | **OLED Display**                                | 1         | 0.96" I2C OLED Display, 128x64                                | I2C-kompatibel, SSD1306-Treiber                                          | [DIYmall 0.96" OLED Display – Amazon](https://www.amazon.com/DIYmall-Serial-128x64-Display-Arduino/dp/B00O2KDQBE) |
 | **Widerstand (100kΩ)**                          | 1         | 100kΩ, 1/4W                                                   | Für Spannungsteiler mit dem Thermistor                                   | [100kΩ Widerstand 20er-Pack – LED-Shop](https://www.led-shop.com/Widerstand-1-4W-100k-Ohm-20er-Pack) |
-| **Thermistor (ATC Semitec 104GT-2)**            | 1         | 10kΩ @ 25°C (NTC)                                             | Temperatursensor                                                         | [JINXIUS 104GT-2 Thermistor – Amazon](https://www.amazon.com/JINXIUS-Temperature-104NT-4-R025H42G-Thermistor-Compatible/dp/B097PBSQYZ) |
+| **Thermistor (ATC Semitec 104GT-2)**            | 1         | 100kΩ @ 25°C (NTC)                                             | Temperatursensor                                                         | [JINXIUS 104GT-2 Thermistor – Amazon](https://www.amazon.com/JINXIUS-Temperature-104NT-4-R025H42G-Thermistor-Compatible/dp/B097PBSQYZ) |
 | **Drucksensor G1/4" (DC 5V)**                   | 1         | Edelstahl, 0–300 PSI, analoger Ausgang                        | Für Wasser, Luft, Gas oder Heizöl                                        | [Drucktransmitter G1/4" – Amazon](https://www.amazon.de/Drucktransmitter-Analogsensor-Wasser-Luftkompressor-0-300/dp/B0DPQTX1JR) |
 | **T-Steckanschluss G1/4"-4mm, IQS-MSV**         | 1         | G1/4" Innengewinde, 4mm Schlauchanschluss                     | Pneumatischer T-Anschluss für Sensorintegration                          | [T-Steckanschluss IQS-MSV – Landefeld](https://www.landefeld.de/artikel/de/t-steckanschluss-g-14-4mm-iqs-msv-standard-/IQST%20144%20G%20MSV) |
 | **Hailege 5pcs NANO IO Shield DIY Kit**         | 1         | DIY-Kit für Arduino Nano (5 Stück)                            | IO-Erweiterungsboard für Arduino Nano                                    | [Hailege Nano IO Shield – Amazon](https://www.amazon.com/Hailege-Shield-Expansion-Board-Arduino/dp/B08D7D8NPL) |
