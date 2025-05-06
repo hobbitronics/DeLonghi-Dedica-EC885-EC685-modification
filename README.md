@@ -22,8 +22,6 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 
 ---
 
-
-
 ## 📦 Bill of Materials (BOM)
 
 | **Komponente**                                  | **Menge** | **Spezifikation**                                             | **Hinweise**                                                            | **Link**                    |
@@ -127,13 +125,7 @@ For this project, I designed a custom enclosure that can be made using FDM 3D pr
 6. Hang the mount onto the screws and then lightly tighten the screws from the front through the mount. The screws do not require high tightening torque.
 7. Place the display onto the mount and clip the display cover onto the front. The display cover holds the display in place without any glue needed.
 
-With 3D printing, you can quickly and cost-effectively create the enclosure yourself. Once printed and assembled, you’ll have a complete, functional system for monitoring your espresso brewing process!
-
 ---
-
-**Note:**  
-If you encounter any issues with printing or assembly, feel free to open an issue or ask questions — we’re happy to help!
-
 
 ## 📸 Photos
 _Images of the mounted system go here_
