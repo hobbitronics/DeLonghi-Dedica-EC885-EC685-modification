@@ -157,6 +157,8 @@ If you find this project helpful and would like to support its development, cons
 
 Thank you for your support! ☕😊
 
+---
+
 ##⚠️ **Warning / Disclaimer**
 
 - This project involves working with high voltage and mechanical components. Improper handling may lead to electric shock, injury, or damage to the equipment.
