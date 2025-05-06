@@ -159,7 +159,7 @@ Thank you for your support! ☕😊
 
 ---
 
-##⚠️ **Warning / Disclaimer**
+##  ⚠️ **Warning / Disclaimer**
 
 - This project involves working with high voltage and mechanical components. Improper handling may lead to electric shock, injury, or damage to the equipment.
 - Modifying your machine will likely void any manufacturer warranty.
