@@ -45,18 +45,35 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 
 
 
-## 🔧 Wiring Diagram
-Basic wiring instructions:
-- **OLED SDA → Arduino A4**
-- **OLED SCL → Arduino A5**
-- **OLED GND → Arduino GND**
-- **OLED VCC → Arduino 5V**
-- **100kΩ resistor → between Arduino GND & Arduino A1** (used for thermistor divider)
-- **Thermistor ATC Semitec 104GT-2 → between Arduino 5V & Arduino A1** (used in conjunction with the resistor for temperature sensing)
-- **Pressure Sensor VCC → Arduino 5V**
-- **Pressure Sensor GND → Arduino GND**
-- **Pressure Sensor SIGNAL → Arduino A0**
+## 🔧 Wiring Diagram & Setup Instructions
 
+### 🖥️ OLED Display (I2C)
+- **SDA** → Arduino **A4**
+- **SCL** → Arduino **A5**
+- **GND** → Arduino **GND**
+- **VCC** → Arduino **5V**
+
+### 🌡️ Thermistor (ATC Semitec 104GT-2) & Voltage Divider
+- **Thermistor**:
+  - One end → Arduino **5V**
+  - Other end → Arduino **A1**
+- **100kΩ Resistor**:
+  - One end → Arduino **A1**
+  - Other end → Arduino **GND**
+
+### 📈 Pressure Sensor
+- **VCC** → Arduino **5V**
+- **GND** → Arduino **GND**
+- **SIGNAL** → Arduino **A0**
+
+### ⚡ Power Supply via Piggyback Connector
+- **The power supply is connected to the board via a piggyback connector**
+- **Positive lead (+)** from power supply → Arduino **VIN**
+- **Ground (−)** from power supply → Arduino **GND**
+
+> ⚠️ **Note**: When powering the Arduino externally, use the **VIN pin**, not the 5V pin. Ensure **GND is shared** across all components for proper reference voltage.
+
+  
 ---
 
 ## 🧑‍💻 Installation
@@ -78,7 +95,9 @@ _Images of the mounted system go here_
 ---
 
 ## 📺 Demo Video
-YouTube: _Add link here_
+YouTube: https://youtu.be/2GCKHqg131g?feature=shared
+         https://youtube.com/shorts/OjNCzPk4PEM?feature=shared
+         https://youtube.com/shorts/8p8zOG2kiDQ?feature=shared
 
 ---
 
