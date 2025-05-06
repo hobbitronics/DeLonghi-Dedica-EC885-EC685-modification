@@ -77,15 +77,30 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 ---
 
 ## 🧑‍💻 Installation
-1. Install the Arduino IDE
-2. Install libraries:
-   - Adafruit SSD1306
-   - Adafruit GFX
-   - DallasTemperature (optional)
-   - OneWire (optional)
-3. Upload `display_controller.ino` to your Arduino Nano
-4. Wire components as described above
-5. Power up and enjoy!
+## 🖥️ **Upload Firmware Using the Arduino IDE**
+
+Follow these steps to upload the firmware to your Arduino using the `.hex` files provided in this repository.
+
+### 1. **Download the firmware file**:
+   - Download the **`dedicioni.ino.with_bootloader.hex`** file from the `/firmware` folder in this repository
+
+### 2. **Open the Arduino IDE**:
+   - Launch the **Arduino IDE** on your computer.
+
+### 3. **Select the correct board and port**:
+   - Go to **Tools** → **Board** and select your Arduino model (e.g., Arduino Uno).
+   - Go to **Tools** → **Port** and select the COM port your Arduino is connected to.
+
+### 4. **Upload the firmware**:
+   - Click on **Sketch** → **Upload Using Programmer**.
+     - If prompted, make sure the programmer is set to **"Arduino as ISP"** (or the programmer you are using).
+
+### 5. **Select the `.hex` file**:
+   - In the file dialog that appears, navigate to the `.hex` file you downloaded earlier.
+   - Select the file and click **Open**.
+
+### 6. **Wait for the upload to finish**:
+   - Once the upload process is completed, your board will automatically start running the new firmware!
 
 ---
 
