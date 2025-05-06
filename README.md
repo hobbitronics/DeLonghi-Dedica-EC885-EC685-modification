@@ -43,8 +43,6 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 | **Stromversorgung Option 2 (Meanwell IRM-03-12S)** | 1       | Meanwell IRM-03-12S, 12V DC, 3W                               | Alternative zu EPLZON, kompakte Bauform                                 | [Meanwell IRM-03-12S – Mouser](https://www.mouser.de/ProductDetail/MEAN-WELL/IRM-03-12S?qs=NKmfXavxMaxrQLjk4RvqlA%3D%3D) |
 | **Piggyback Flachstecker**                      | 2         | Flachsteckverbinder mit zusätzlichem Abzweig (z. B. 6,3 mm)   | Für das Durchschleifen von Stromverbindungen                             | [Piggyback Flachstecker 6,3 mm – Amazon](https://www.amazon.de/-/en/10-Piggy-Backs-5mm%C2%B2-6-red/dp/B005J4QMLI) |
 
-
-
 ## 🔧 Wiring Diagram & Setup Instructions
 
 ### 🖥️ OLED Display (I2C)
@@ -103,6 +101,43 @@ Follow these steps to upload the firmware to your Arduino using the `.hex` files
    - Once the upload process is completed, your board will automatically start running the new firmware!
 
 ---
+
+## 🖨️ 3D Printing the Enclosure
+
+For this project, I designed a custom enclosure that can be made using FDM 3D printing.      
+
+1. **Download the 3D Model:**
+   - The 3D model for the enclosure is available on **Printables**. You can download it directly from [[this link]([https://www.printables.com](https://www.printables.com/model/1214912-delonghi-dedica-ec885-ec685-modification-display)):
+     - [Link to the enclosure model on Printables](https://www.printables.com)](https://www.printables.com/model/1214912-delonghi-dedica-ec885-ec685-modification-display)
+
+2. **Prepare the 3D Printer:**
+   - Make sure your 3D printer is properly calibrated.
+   - You can download the model in STL format and open it with a 3D printing program such as **Cura** or **PrusaSlicer**.
+
+3. **Printing Settings:**
+   - **Material:** PLA or PETG (PLA is easiest to print, but PETG is more durable and heat-resistant).
+   - **Layer Height:** 0.2 mm (standard for good quality).
+   - **Infill:** 20–30% (enough for stability without wasting too much material).
+   - **Supports:** Depending on your printer and the design of the enclosure, you may need to enable support structures for printing tricky areas of the case.
+
+4. **Start Printing:**
+   - Begin the printing process and wait until the enclosure is fully printed.
+
+5. **Post-Processing:**
+   - Carefully remove the enclosure from the print bed.
+   - Remove any excess support structures (if used) and smooth any rough edges with sandpaper.
+
+### 🔩 **Assembly of the Enclosure:**
+- **Screws:** The enclosure uses **M2.5x12mm screws** (included in the Bill of Materials) to securely attach the components.
+- **Assembly:** Place the Arduino Nano, OLED display, and other components into the enclosure and secure them with screws at the designated spots.
+
+With 3D printing, you can quickly and cost-effectively create the enclosure yourself. Once printed and assembled, you’ll have a complete, functional system for monitoring your espresso brewing process!
+
+---
+
+**Note:**  
+If you encounter any issues with printing or assembly, feel free to open an issue or ask questions — we’re happy to help!
+
 
 ## 📸 Photos
 _Images of the mounted system go here_
