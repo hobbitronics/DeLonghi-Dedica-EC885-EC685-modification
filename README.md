@@ -108,28 +108,24 @@ For this project, I designed a custom enclosure that can be made using FDM 3D pr
 
 1. **Download the 3D Model:**
    - The 3D model for the enclosure is available on **Printables**. You can download it directly from [[this link]([https://www.printables.com](https://www.printables.com/model/1214912-delonghi-dedica-ec885-ec685-modification-display)):
-     - [Link to the enclosure model on Printables](https://www.printables.com)](https://www.printables.com/model/1214912-delonghi-dedica-ec885-ec685-modification-display)
 
-2. **Prepare the 3D Printer:**
-   - Make sure your 3D printer is properly calibrated.
-   - You can download the model in STL format and open it with a 3D printing program such as **Cura** or **PrusaSlicer**.
-
-3. **Printing Settings:**
-   - **Material:** PLA or PETG (PLA is easiest to print, but PETG is more durable and heat-resistant).
+2. **Printing Settings:**
+   - **Material:** ASA, ABS or PETG 
    - **Layer Height:** 0.2 mm (standard for good quality).
    - **Infill:** 20–30% (enough for stability without wasting too much material).
-   - **Supports:** Depending on your printer and the design of the enclosure, you may need to enable support structures for printing tricky areas of the case.
-
-4. **Start Printing:**
-   - Begin the printing process and wait until the enclosure is fully printed.
-
-5. **Post-Processing:**
-   - Carefully remove the enclosure from the print bed.
-   - Remove any excess support structures (if used) and smooth any rough edges with sandpaper.
+   - **Supports:** is needed, you should place the display holder flat on the front side
+   - **Brim:** is needed if you print with ASA or ABS
 
 ### 🔩 **Assembly of the Enclosure:**
 - **Screws:** The enclosure uses **M2.5x12mm screws** (included in the Bill of Materials) to securely attach the components.
-- **Assembly:** Place the Arduino Nano, OLED display, and other components into the enclosure and secure them with screws at the designated spots.
+- **Assembly:**
+1. Remove the DeLonghi emblem by using pliers to detach the clips from the inside. Afterward, the emblem can be removed.
+2. The remaining holes on the left and right will be used as mounting points in conjunction with the M2.5 insert nuts. The nuts will be glued from the inside using some CA glue.
+3. Pass the 4-wire display cable through the middle large hole from the outside.
+4. Screw in the M2.5 screws loosely.
+5. Slide the display through the display mount from the back. It was specifically designed so that the display fits perfectly.
+6. Hang the mount onto the screws and then lightly tighten the screws from the front through the mount. The screws do not require high tightening torque.
+7. Place the display onto the mount and clip the display cover onto the front. The display cover holds the display in place without any glue needed.
 
 With 3D printing, you can quickly and cost-effectively create the enclosure yourself. Once printed and assembled, you’ll have a complete, functional system for monitoring your espresso brewing process!
 
