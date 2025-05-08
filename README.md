@@ -105,7 +105,8 @@ Follow these steps to upload the firmware to your Arduino using the `.hex` files
 For this project, I designed a custom enclosure that can be made using FDM 3D printing.      
 
 1. **Download the 3D Model:**
-   - The 3D model for the enclosure is available on **Printables**. You can download it directly from [[this link]([https://www.printables.com](https://www.printables.com/model/1214912-delonghi-dedica-ec885-ec685-modification-display)):
+   - The 3D model for the enclosure is available on **Printables**. You can download it directly from
+     <iframe src="https://www.printables.com/embed/1214912" width="400" height="445" scrolling="no" frameborder="0"></iframe>
 
 2. **Printing Settings:**
    - **Material:** ASA, ABS or PETG 
