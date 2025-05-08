@@ -11,13 +11,13 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 
 ## ✨ Features
 
-- **Non-invasive monitoring**: The machine remains unmodified — no soldering, no drilling, and 100% reversible installation.
+- **Non-invasive monitoring**: The machine remains unmodified — no soldering to the maschine electronic, no drilling, and 100% reversible installation.
 - **Real-time shot timer**: Accurately displays extraction duration from the moment the pressure is high enough and the extraction starts.
-- **Pressure measurement**: Displays current and maximum brewing pressure during extraction.
-- **Temperature display** *(optional)*: Shows current and maximum water temperature while brewing.
-- **Post-shot analysis**: After extraction, the display shows average pressure and temperature values.
+- **Pressure measurement**: Displays current and maximum brewing pressure during extraction, afterwards maximum and average pressure.
+- **Temperature display**: Shows current heater block temperature while brewing, afterwards maximum and average temperature.
+- **Post-shot analysis**: After extraction, the display shows average & maximum pressure and temperature values.
 - **OLED display**: Compact 128x64 I2C screen for clear and minimalistic visualization.
-- **Standalone system**: Powered by USB, does not interfere with the machine’s electronics.
+- **Standalone system**: Powered by mini 12V power supply, does not interfere with the machine’s electronics.
 - **3D-printed mounting**: Reuses existing logo mounting holes — no drilling required.
 
 ---
@@ -68,7 +68,6 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 - **Ground (−)** from power supply → Arduino **GND**
 
 > ⚠️ **Note**: When powering the Arduino externally, use the **VIN pin**, not the 5V pin. Ensure **GND is shared** across all components for proper reference voltage.
-
   
 ---
 
@@ -114,6 +113,7 @@ For this project, I designed a custom enclosure that can be made using FDM 3D pr
    - **Infill:** 20–30% (enough for stability without wasting too much material).
    - **Supports:** is needed, you should place the display holder flat on the front side
    - **Brim:** is needed if you print with ASA or ABS
+   - **Fuzzy skin:** is optional
 
 ### 🔩 **Assembly of the Enclosure:**
 - **Screws:** The enclosure uses **M2.5x12mm screws** (included in the Bill of Materials) to securely attach the components.
