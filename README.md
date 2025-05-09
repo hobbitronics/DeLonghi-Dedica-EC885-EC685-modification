@@ -41,6 +41,8 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 | **Power Supply Option 2 (Meanwell IRM-03-12S)**  | 1            | Meanwell IRM-03-12S, 12V DC, 3W                                 | [Meanwell IRM-03-12S – Mouser](https://www.mouser.de/ProductDetail/MEAN-WELL/IRM-03-12S?qs=NKmfXavxMaxrQLjk4RvqlA%3D%3D) |
 | **Piggyback Spade Connector**                    | 2            | Spade connector with additional branch (e.g., 6.3 mm)           | [Piggyback Spade Connector 6.3 mm – Amazon](https://www.amazon.de/-/en/10-Piggy-Backs-5mm%C2%B2-6-red/dp/B005J4QMLI) |
 
+replacement hose: https://komtra.de/delonghi-ersatzteile/delonghi-ersatzteile/schlauch-l230-mm-klemmverbindung-klemmverbindung.html
+
 ---
 
 ## 🔧 Wiring Diagram & Setup Instructions
