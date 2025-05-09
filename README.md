@@ -123,8 +123,8 @@ For this project, I designed a custom enclosure that can be made using FDM 3D pr
    - **Fuzzy skin:** is optional
 
 ### 🔩 **Assembly of the Enclosure:**
-- **Screws:** The enclosure uses **M2.5x12mm screws** (included in the Bill of Materials) to securely attach the components.
-- **Assembly:**
+
+**Assembly:** The enclosure uses **M2.5x12mm screws** (included in the Bill of Materials) to securely attach the components.
 1. Remove the DeLonghi emblem by using pliers to detach the clips from the inside. Afterward, the emblem can be removed.
 2. The remaining holes on the left and right will be used as mounting points in conjunction with the M2.5 insert nuts. The nuts will be glued from the inside using some CA glue.
 3. Pass the 4-wire display cable through the middle large hole from the outside.
