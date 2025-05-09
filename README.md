@@ -133,6 +133,9 @@ For this project, I designed a custom enclosure that can be made using FDM 3D pr
 6. Hang the mount onto the screws and then lightly tighten the screws from the front through the mount. The screws do not require high tightening torque.
 7. Place the display onto the mount and clip the display cover onto the front. The display cover holds the display in place without any glue needed.
 
+![Wiring Diagram](images/Folie1.JPG)
+![Wiring Diagram](images/Folie2.JPG)
+
 ---
 
 ## 🌡️ Mounting the Temperature Sensor
