@@ -22,8 +22,6 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 
 ---
 
-## 📦 Bill of Materials (BOM)
-
 | **Component**                                   | **Quantity** | **Specification**                                              | **Link**                    |
 |--------------------------------------------------|--------------|----------------------------------------------------------------|-----------------------------|
 | **Arduino Nano**                                 | 1            | Microcontroller                                                 | [Arduino Nano – Arduino Store](https://store.arduino.cc/products/arduino-nano) |
@@ -36,6 +34,7 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 | **Cables**                                       | -            | Various lengths                                                 | |
 | **WAGO 2-pin Lever Connector**                   | 2            | -                                                               | [WAGO 2-pin Connector](https://www.wago.com/de/installationsklemmen/verbindungsklemme-mit-hebeln/p/221-412) |
 | **Screws M2.5x12mm**                             | 2            | M2.5, length: 12mm                                              | [M2.5x12mm Screws – Amazon](https://www.amazon.de/Innensechskant-Au%C3%9Fengewinde-Edelstahl-Anti-Lose-Maschinenbefestigungen-M2-5x12mm/dp/B0BJPLYXK1) |
+| **Screw M3x12mm**                                | 1            | M3, length: 12mm                                                | [M3x12mm Screw – Amazon](https://www.amazon.de/dp/B08BL9PK4N) |
 | **M2.5 Thread Inserts / T-nuts**                 | 2            | M2.5                                                            | [M2.5 Thread Inserts / T-nuts](https://www.ahltec.de/shop/de/M2-5-Gewindeeinsaetze--Einschlagmuttern-438.html) |
 | **Power Supply Option 1 (EPLZON 12V)**           | 1            | EPLZON 12V/DC 6W Mini LED Transformer                           | [EPLZON 12V Power Supply – Amazon](https://www.amazon.de/EPLZON-Transformator-Leuchten-Stripes-Mindestlastanforderungen/dp/B0DQNP4Z2S) |
 | **Power Supply Option 2 (Meanwell IRM-03-12S)**  | 1            | Meanwell IRM-03-12S, 12V DC, 3W                                 | [Meanwell IRM-03-12S – Mouser](https://www.mouser.de/ProductDetail/MEAN-WELL/IRM-03-12S?qs=NKmfXavxMaxrQLjk4RvqlA%3D%3D) |
@@ -130,6 +129,32 @@ For this project, I designed a custom enclosure that can be made using FDM 3D pr
 6. Hang the mount onto the screws and then lightly tighten the screws from the front through the mount. The screws do not require high tightening torque.
 7. Place the display onto the mount and clip the display cover onto the front. The display cover holds the display in place without any glue needed.
 
+---
+
+## 🌡️ Mounting the Temperature Sensor
+
+The temperature sensor (NTC thermistor type 104GT-2) is attached directly to the thermoblock with an M3 screw to provide accurate temperature readings during the extraction process.
+
+### 🛠️ Steps:
+
+1. **Access the thermoblock**  
+   Carefully remove the machine’s top cover to access the thermoblock. Be mindful of any clips or screws that may be securing it.
+
+2. **Remove the original hose**  
+   Disconnect the silicone hose between the thermoblock and the outlet. This can be replaced with a spare part (see BOM), making the modification fully reversible.
+
+3. **Install the T-connector**  
+   Insert the G1/4" T-fitting between the thermoblock and the outlet. Ensure all connections are tight and that water flow is not restricted.
+
+4. **Insert the thermistor**  
+   Screw the thermistor into the free port of the T-fitting. Use heat-resistant thread seal tape (PTFE tape) if necessary to prevent leaks.
+
+5. **Route the cable**  
+   Guide the thermistor cable out of the housing carefully, avoiding sharp edges or tight bends. Connect it to the Arduino as described in the **Wiring Diagram** section.
+
+### 🔁 Reversibility
+
+All steps are 100% reversible — the machine can be restored to its original condition at any time since no permanent modifications are made.
 ---
 
 ## 📸 Photos
