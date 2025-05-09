@@ -182,11 +182,19 @@ _Images of the mounted system go here_
 ---
 
 ## 📺 Demo Video
-YouTube: 
 
-https://youtu.be/2GCKHqg131g?feature=shared
-https://youtube.com/shorts/OjNCzPk4PEM?feature=shared
-https://youtube.com/shorts/8p8zOG2kiDQ?feature=shared
+<a href="https://youtu.be/2GCKHqg131g" target="_blank">
+  <img src="https://img.youtube.com/vi/2GCKHqg131g/0.jpg" width="300"/>
+</a>
+
+<a href="https://youtube.com/shorts/OjNCzPk4PEM" target="_blank">
+  <img src="https://img.youtube.com/vi/OjNCzPk4PEM/0.jpg" width="300"/>
+</a>
+
+<a href="https://youtube.com/shorts/8p8zOG2kiDQ" target="_blank">
+  <img src="https://img.youtube.com/vi/8p8zOG2kiDQ/0.jpg" width="300"/>
+</a>
+
 
 ---
 
