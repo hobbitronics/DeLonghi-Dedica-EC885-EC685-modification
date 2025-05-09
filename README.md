@@ -137,23 +137,26 @@ For this project, I designed a custom enclosure that can be made using FDM 3D pr
 
 ## 🌡️ Mounting the Temperature Sensor
 
-The temperature sensor (NTC thermistor type 104GT-2) is attached directly to the thermoblock with an M3 screw to provide accurate temperature readings during the extraction process.
+The temperature sensor (NTC thermistor type 104GT-2) is attached directly to the thermoblock with an M3x12mm screw to provide accurate temperature readings during the extraction process.
+I found a position where it's not needed to drill a hole. The hole is already there and the material of the thermoblock is so soft that it's not needed to cut a thread before. Ofcourse it's better to cut the thread with an M3 thread cutting tool. Be careful.
 
 ### 🛠️ Steps:
 
 1. **Access the thermoblock**  
-   Carefully remove the machine’s top cover to access the thermoblock. Be mindful of any clips or screws that may be securing it.
+   I will upload a video of the whole process in the near future
 
-2. **Remove the original hose**  
-   Disconnect the silicone hose between the thermoblock and the outlet. This can be replaced with a spare part (see BOM), making the modification fully reversible.
+2. **Cut the thread**
+  Use a M3 thread cutting tool is the best option.
+  Using the screw itself is also possible. But be carefull!
+  Gently screw in the screw in little back and forward steps. During that proces the screw need some axial pressure.
+  Make sure that the screw is screwed in straight
 
-3. **Install the T-connector**  
-   Insert the G1/4" T-fitting between the thermoblock and the outlet. Ensure all connections are tight and that water flow is not restricted.
-
-4. **Insert the thermistor**  
+3. **optional: file/sand a hollow for a good fit of the temperature sensor**  
+ 
+5. **Insert the thermistor**  
    Screw the thermistor into the free port of the T-fitting. Use heat-resistant thread seal tape (PTFE tape) if necessary to prevent leaks.
 
-5. **Route the cable**  
+6. **Route the cable**  
    Guide the thermistor cable out of the housing carefully, avoiding sharp edges or tight bends. Connect it to the Arduino as described in the **Wiring Diagram** section.
 
 ### 🔁 Reversibility
