@@ -36,7 +36,7 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 | **Cables**                                       | -            | Various lengths                                                 | |
 | **WAGO 2-pin Lever Connector**                   | 2            | -                                                               | [WAGO 2-pin Connector](https://www.wago.com/de/installationsklemmen/verbindungsklemme-mit-hebeln/p/221-412) |
 | **Screws M2.5x12mm**                             | 2            | M2.5, length: 12mm                                              | [M2.5x12mm Screws – Amazon](https://www.amazon.de/Innensechskant-Au%C3%9Fengewinde-Edelstahl-Anti-Lose-Maschinenbefestigungen-M2-5x12mm/dp/B0BJPLYXK1) |
-| **Screw M3x12mm**                                | 1            | M3, length: 12mm                                                | [M3x12mm Screw – Amazon](https://www.amazon.de/dp/B08BL9PK4N) |
+| **Screw M4x12mm**                                | 1            | M4, length: 12mm                                                | [M4x12mm Screw – Amazon](https://www.amazon.de/dp/B08BL9PK4N) |
 | **M2.5 Thread Inserts / T-nuts**                 | 2            | M2.5                                                            | [M2.5 Thread Inserts / T-nuts](https://www.ahltec.de/shop/de/M2-5-Gewindeeinsaetze--Einschlagmuttern-438.html) |
 | **Power Supply Option 1 (EPLZON 12V)**           | 1            | EPLZON 12V/DC 6W Mini LED Transformer                           | [EPLZON 12V Power Supply – Amazon](https://www.amazon.de/EPLZON-Transformator-Leuchten-Stripes-Mindestlastanforderungen/dp/B0DQNP4Z2S) |
 | **Power Supply Option 2 (Meanwell IRM-03-12S)**  | 1            | Meanwell IRM-03-12S, 12V DC, 3W                                 | [Meanwell IRM-03-12S – Mouser](https://www.mouser.de/ProductDetail/MEAN-WELL/IRM-03-12S?qs=NKmfXavxMaxrQLjk4RvqlA%3D%3D) |
@@ -149,7 +149,7 @@ I found a position where it's not needed to drill a hole. The hole is already th
    I will upload a video of the whole process in the near future.
 
 2. **Cut the thread**  
-   Using an M3 thread cutting tool is the best option.  
+   Using an M4 thread cutting tool is the best option.  
    It is also possible to use the screw itself, but be careful!  
    Gently screw in the screw with small back-and-forth movements. During this process, the screw needs some axial pressure.  
    Make sure that the screw is screwed in straight.
