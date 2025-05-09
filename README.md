@@ -143,21 +143,25 @@ I found a position where it's not needed to drill a hole. The hole is already th
 ### 🛠️ Steps:
 
 1. **Access the thermoblock**  
-   I will upload a video of the whole process in the near future
+   I will upload a video of the whole process in the near future.
 
-2. **Cut the thread**
-  Use a M3 thread cutting tool is the best option.
-  Using the screw itself is also possible. But be carefull!
-  Gently screw in the screw in little back and forward steps. During that proces the screw need some axial pressure.
-  Make sure that the screw is screwed in straight
+2. **Cut the thread**  
+   Using an M3 thread cutting tool is the best option.  
+   It is also possible to use the screw itself, but be careful!  
+   Gently screw in the screw with small back-and-forth movements. During this process, the screw needs some axial pressure.  
+   Make sure that the screw is screwed in straight.
 
-3. **optional: file/sand a hollow for a good fit of the temperature sensor**  
- 
-5. **Insert the thermistor**  
-   Screw the thermistor into the free port of the T-fitting. Use heat-resistant thread seal tape (PTFE tape) if necessary to prevent leaks.
+3. **Optional: file/sand a hollow for a better fit of the temperature sensor**  
+   For better contact and more accurate temperature readings, you can use a 3mm reamer to create a better fit between the temperature sensor and the heater block.  
+   This step is not necessary.
 
-6. **Route the cable**  
-   Guide the thermistor cable out of the housing carefully, avoiding sharp edges or tight bends. Connect it to the Arduino as described in the **Wiring Diagram** section.
+4. **Apply thermal paste**  
+   Apply thermal paste to the temperature sensor and to the heater block.  
+   Simply wipe off any excess paste after mounting the sensor and tightening the screw.  
+
+5. **Route the cable**  
+   Guide the thermistor cable down to the electronic board, avoiding sharp edges or tight bends. Connect it to the Arduino as described in the **Wiring Diagram** section.
+
 
 ### 🔁 Reversibility
 
