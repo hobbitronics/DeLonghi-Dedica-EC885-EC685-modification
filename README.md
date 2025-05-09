@@ -162,10 +162,10 @@ I found a position where it's not needed to drill a hole. The hole is already th
 5. **Route the cable**  
    Guide the thermistor cable down to the electronic board, avoiding sharp edges or tight bends. Connect it to the Arduino as described in the **Wiring Diagram** section.
 
-![Wiring Diagram](images/Folie3.jpeg)
-![Wiring Diagram](images/Folie4.jpeg)
-![Wiring Diagram](images/Folie5.jpeg)
-![Wiring Diagram](images/Folie6.jpeg)
+![Wiring Diagram](images/Folie3.JPG)
+![Wiring Diagram](images/Folie4.JPG)
+![Wiring Diagram](images/Folie5.JPG)
+![Wiring Diagram](images/Folie6.JPG)
 
 
 ### 🔁 Reversibility
