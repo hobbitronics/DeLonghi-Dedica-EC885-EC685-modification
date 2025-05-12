@@ -22,26 +22,28 @@ The system is based on an Arduino Nano with its own power supply. It can be conn
 
 ---
 
+
 ## 📦 Bill of Materials (BOM)
 
-| **Component**                                   | **Quantity** | **Specification**                                              | **Link**                    |
-|--------------------------------------------------|--------------|----------------------------------------------------------------|-----------------------------|
-| **Arduino Nano**                                 | 1            | Microcontroller                                                 | [Arduino Nano – Arduino Store](https://store.arduino.cc/products/arduino-nano) |
-| **OLED Display**                                 | 1            | 0.96" I2C OLED Display, 128x64                                  | [DIYmall 0.96" OLED Display – Amazon](https://www.amazon.com/DIYmall-Serial-128x64-Display-Arduino/dp/B00O2KDQBE) |
-| **Resistor (100kΩ)**                             | 1            | 100kΩ, 1/4W                                                     | [100kΩ Resistor 20-pack – LED-Shop](https://www.led-shop.com/Widerstand-1-4W-100k-Ohm-20er-Pack) |
-| **Thermistor (ATC Semitec 104GT-2)**             | 1            | 100kΩ @ 25°C (NTC)                                              | [JINXIUS 104GT-2 Thermistor – Amazon](https://www.amazon.com/JINXIUS-Temperature-104NT-4-R025H42G-Thermistor-Compatible/dp/B097PBSQYZ) |
-| **Pressure Sensor G1/4" (DC 5V)**                | 1            | Stainless steel, 0–300 PSI, analog output                       | [Pressure Transmitter G1/4" – Amazon](https://www.amazon.de/Drucktransmitter-Analogsensor-Wasser-Luftkompressor-0-300/dp/B0DPQTX1JR) |
-| **T-Connector G1/4"-4mm, IQS-MSV**               | 1            | G1/4" female thread, 4mm hose connector                         | https://www.landefeld.de/artikel/de/t-steckanschluss-innengew-g-14-4mm-iqs-msv-standard-/IQSTFF%20144%20MSV |
-| **Hailege 5pcs NANO IO Shield DIY Kit**          | 1            | DIY kit for Arduino Nano (5 pieces)                             | [Hailege Nano IO Shield – Amazon](https://www.amazon.com/Hailege-Shield-Expansion-Board-Arduino/dp/B08D7D8NPL) |
-| **Cables**                                       | -            | Various lengths                                                 | |
-| **WAGO 2-pin Lever Connector**                   | 2            | -                                                               | [WAGO 2-pin Connector](https://www.wago.com/de/installationsklemmen/verbindungsklemme-mit-hebeln/p/221-412) |
-| **Screws M2.5x12mm**                             | 2            | M2.5, length: 12mm                                              | [M2.5x12mm Screws – Amazon](https://www.amazon.de/Innensechskant-Au%C3%9Fengewinde-Edelstahl-Anti-Lose-Maschinenbefestigungen-M2-5x12mm/dp/B0BJPLYXK1) |
-| **Screw M4x12mm**                                | 1            | M4, length: 12mm                                                | [M4x12mm Screw – Amazon](https://www.amazon.de/dp/B08BL9PK4N) |
-| **M2.5 Thread Inserts / T-nuts**                 | 2            | M2.5                                                            | [M2.5 Thread Inserts / T-nuts](https://www.ahltec.de/shop/de/M2-5-Gewindeeinsaetze--Einschlagmuttern-438.html) |
-| **Power Supply Option 1 (EPLZON 12V)**           | 1            | EPLZON 12V/DC 6W Mini LED Transformer                           | [EPLZON 12V Power Supply – Amazon](https://www.amazon.de/EPLZON-Transformator-Leuchten-Stripes-Mindestlastanforderungen/dp/B0DQNP4Z2S) |
-| **Power Supply Option 2 (Meanwell IRM-03-12S)**  | 1            | Meanwell IRM-03-12S, 12V DC, 3W                                 | [Meanwell IRM-03-12S – Mouser](https://www.mouser.de/ProductDetail/MEAN-WELL/IRM-03-12S?qs=NKmfXavxMaxrQLjk4RvqlA%3D%3D) |
-| **Piggyback Spade Connector**                    | 2            | Spade connector with additional branch (e.g., 6.3 mm)           | [Piggyback Spade Connector 6.3 mm – Amazon](https://www.amazon.de/-/en/10-Piggy-Backs-5mm%C2%B2-6-red/dp/B005J4QMLI) |
-| **Thermal Paste**                                | 1            | Standard CPU-compatible thermal paste                           | [ARCTIC MX-4 Thermal Paste – Amazon](https://www.amazon.de/dp/B0795DP124) |
+| **#** | **Component**                                   | **Quantity** | **Specification**                                              | **Link**                    |
+|-------|--------------------------------------------------|--------------|----------------------------------------------------------------|-----------------------------|
+| 1     | **Arduino Nano**                                 | 1            | Microcontroller                                                 | [Arduino Nano – Arduino Store](https://store.arduino.cc/products/arduino-nano) |
+| 2     | **OLED Display**                                 | 1            | 0.96" I2C OLED Display, 128x64                                  | [DIYmall 0.96" OLED Display – Amazon](https://www.amazon.com/DIYmall-Serial-128x64-Display-Arduino/dp/B00O2KDQBE) |
+| 3     | **Resistor (100kΩ)**                             | 1            | 100kΩ, 1/4W                                                     | [100kΩ Resistor 20-pack – LED-Shop](https://www.led-shop.com/Widerstand-1-4W-100k-Ohm-20er-Pack) |
+| 4     | **Thermistor (ATC Semitec 104GT-2)**             | 1            | 100kΩ @ 25°C (NTC)                                              | [JINXIUS 104GT-2 Thermistor – Amazon](https://www.amazon.com/JINXIUS-Temperature-104NT-4-R025H42G-Thermistor-Compatible/dp/B097PBSQYZ) |
+| 5     | **Pressure Sensor G1/4" (DC 5V)**                | 1            | Stainless steel, 0–300 PSI, analog output                       | [Pressure Transmitter G1/4" – Amazon](https://www.amazon.de/Drucktransmitter-Analogsensor-Wasser-Luftkompressor-0-300/dp/B0DPQTX1JR) |
+| 6     | **T-Connector G1/4"-4mm, IQS-MSV**               | 1            | G1/4" female thread, 4mm hose connector                         | [T-Connector G1/4"-4mm – Landefeld](https://www.landefeld.de/artikel/de/t-steckanschluss-innengew-g-14-4mm-iqs-msv-standard-/IQSTFF%20144%20MSV) |
+| 7     | **Hailege 5pcs NANO IO Shield DIY Kit**          | 1            | DIY kit for Arduino Nano (5 pieces)                             | [Hailege Nano IO Shield – Amazon](https://www.amazon.com/Hailege-Shield-Expansion-Board-Arduino/dp/B08D7D8NPL) |
+| 8     | **Cables**                                       | -            | Various lengths                                                 | |
+| 9     | **WAGO 2-pin Lever Connector**                   | 2            | -                                                               | [WAGO 2-pin Connector](https://www.wago.com/de/installationsklemmen/verbindungsklemme-mit-hebeln/p/221-412) |
+| 10    | **Screws M2.5x12mm**                             | 2            | M2.5, length: 12mm                                              | [M2.5x12mm Screws – Amazon](https://www.amazon.de/Innensechskant-Au%C3%9Fengewinde-Edelstahl-Anti-Lose-Maschinenbefestigungen-M2-5x12mm/dp/B0BJPLYXK1) |
+| 11    | **Screw M4x12mm**                                | 1            | M4, length: 12mm                                                | [M4x12mm Screw – Amazon](https://www.amazon.de/dp/B08BL9PK4N) |
+| 12    | **M2.5 Thread Inserts / T-nuts**                 | 2            | M2.5                                                            | [M2.5 Thread Inserts / T-nuts – Ahltec](https://www.ahltec.de/shop/de/M2-5-Gewindeeinsaetze--Einschlagmuttern-438.html) |
+| 13    | **Power Supply Option 1 (EPLZON 12V)**           | 1            | EPLZON 12V/DC 6W Mini LED Transformer                           | [EPLZON 12V Power Supply – Amazon](https://www.amazon.de/EPLZON-Transformator-Leuchten-Stripes-Mindestlastanforderungen/dp/B0DQNP4Z2S) |
+| 14    | **Power Supply Option 2 (Meanwell IRM-03-12S)**  | 1            | Meanwell IRM-03-12S, 12V DC, 3W                                 | [Meanwell IRM-03-12S – Mouser](https://www.mouser.de/ProductDetail/MEAN-WELL/IRM-03-12S?qs=NKmfXavxMaxrQLjk4RvqlA%3D%3D) |
+| 15    | **Piggyback Spade Connector**                    | 2            | Spade connector with additional branch (e.g., 6.3 mm)           | [Piggyback Spade Connector 6.3 mm – Amazon](https://www.amazon.de/-/en/10-Piggy-Backs-5mm%C2%B2-6-red/dp/B005J4QMLI) |
+| 16    | **Thermal Paste**                                | 1            | Standard CPU-compatible thermal paste                           | [ARCTIC MX-4 Thermal Paste – Amazon](https://www.amazon.de/dp/B0795DP124) |
+
 
 
 replacement hose: https://komtra.de/delonghi-ersatzteile/delonghi-ersatzteile/schlauch-l230-mm-klemmverbindung-klemmverbindung.html
