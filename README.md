@@ -218,8 +218,10 @@ Thank you for your support! ☕😊
 
 ---
 
-##  ⚠️ **Warning / Disclaimer**
+## ⚠️ **Warning / Disclaimer**
 
-- This project involves working with high voltage and mechanical components. Improper handling may lead to electric shock, injury, or damage to the equipment.
-- Modifying your machine will likely void any manufacturer warranty.
-- You are responsible for any risks or consequences. Proceed only if you have experience with electronics and high-voltage systems.
+- This project involves working with high voltage, mechanical components, and fluid systems. Improper handling may result in electric shock, injury, or equipment damage.  
+- Components are introduced into the machine's circulation system that come into contact with water. This is done at your own risk and may pose potential health hazards.  
+- Modifying your machine will likely void any manufacturer warranty.  
+- You assume full responsibility for any risks, damages, or consequences. Proceed only if you have adequate experience with electronics, high-voltage systems, and fluid-handling safety.
+
