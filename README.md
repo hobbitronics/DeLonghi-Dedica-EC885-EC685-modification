@@ -172,6 +172,12 @@ I found a position where it's not needed to drill a hole. The hole is already th
 ![Wiring Diagram](images/Folie5.JPG)
 ![Wiring Diagram](images/Folie6.JPG)
 
+## Mounting the Arduino and power supply Inside the Dedica
+- I managed to double sided tape them inside the main control board space. Power supply top left and Arduino bottom left.
+- Female connector wires can be used on the power supply and run to the "line" and "neutral" AC lines with the piggyback connectors although I didn't have room for them so had to improvise.
+- A plastic separator for the Arduino and the main board is advised.
+- I ran power and ground to the top of the Dedica to be shared by the screen and sensors and used Wago connectors.
+- Wires from the thermistor screen will be routed similarly avoiding hot components.
 
 ### 🔁 Reversibility
 
