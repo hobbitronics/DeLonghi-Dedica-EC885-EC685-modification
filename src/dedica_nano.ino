@@ -25,8 +25,8 @@ const int PRESS_SAMPLES = 12;
 const float TEMP_IIR_ALPHA = 0.12;
 
 // Shot detection
-const float SHOT_START_BAR = 1.2;
-const float SHOT_END_BAR = 0.9;
+const float SHOT_START_BAR = 4.0;
+const float SHOT_END_BAR = 4.0;
 const unsigned long SHOT_END_HYST_MS = 700;
 
 // Sparkline
@@ -86,7 +86,7 @@ void drawLiveScreen(float pressure, float tempC, unsigned long shotTimeMs) {
   u8g2.setFont(u8g2_font_fub20_tr);
   int pw = u8g2.getUTF8Width(buf);
   u8g2.drawUTF8((128-pw)/2,38,buf);
-  u8g2.setFont(u8g2_font_6x10_tr);
+  u8g2.setFont(u8g2_font_ncenB08_tr);
   u8g2.drawStr((128-pw)/2 + pw + 2,34,"bar");
 
   // Temperature
@@ -131,6 +131,7 @@ void drawPostShotScreen(uint8_t peak, uint16_t sum, unsigned int samples, float 
   // --- Peak pressure ---
   float peakF = peak / 10.0;
   dtostrf(peakF, 4, 1, buf);       // float → string
+  u8g2.setFont(u8g2_font_ncenB08_tr);
   u8g2.drawStr(4, 18, "Peak: ");
   u8g2.drawStr(4 + u8g2.getStrWidth("Peak: "), 18, buf);
 
@@ -194,7 +195,7 @@ void loop() {
         in_shot=false; last_below_ms=0;
         drawPostShotScreen(peak_bar,sum_bar,shot_samples,temp_filtered,shot_len);
         peak_bar=0; sum_bar=0; shot_samples=0;
-        delay(10000);
+        delay(15000);
       }
     }else last_below_ms=0;
   }
