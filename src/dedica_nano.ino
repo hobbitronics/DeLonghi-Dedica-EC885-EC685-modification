@@ -26,7 +26,7 @@ const float TEMP_IIR_ALPHA = 0.12;
 
 // Shot detection
 const float SHOT_START_BAR = 4.0;
-const float SHOT_END_BAR = 4.0;
+const float SHOT_END_BAR = 7.0;
 const unsigned long SHOT_END_HYST_MS = 700;
 
 // Sparkline
@@ -181,14 +181,14 @@ void loop() {
 
   unsigned long now=millis();
   if(!in_shot){
-    if(bar>=SHOT_START_BAR*10){
+    if(bar>=SHOT_START_BAR){
       in_shot=true; shot_start_ms=now;
       peak_bar=bar; sum_bar=bar; shot_samples=1;
     }
   }else{ 
     if(bar>peak_bar) peak_bar=bar;
     sum_bar+=bar; shot_samples++;
-    if(bar<SHOT_END_BAR*10){
+    if(bar<SHOT_END_BAR){
       if(last_below_ms==0) last_below_ms=now;
       else if(now-last_below_ms>=SHOT_END_HYST_MS){
         unsigned long shot_len=now-shot_start_ms;
