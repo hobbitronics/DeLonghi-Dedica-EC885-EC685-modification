@@ -27,7 +27,7 @@ const float TEMP_IIR_ALPHA = 0.12;
 // Shot detection
 const float SHOT_START_BAR = 4.0;
 const float SHOT_END_BAR = 7.0;
-const unsigned long SHOT_END_HYST_MS = 700;
+const unsigned long SHOT_END_HYST_MS = 200;
 
 // Sparkline
 #define SPARK_SAMPLES 64
@@ -143,13 +143,13 @@ void drawPostShotScreen(uint8_t peak, uint16_t sum, unsigned int samples, float 
 
   // --- Temperature ---
   dtostrf(tempC, 4, 1, buf);
-  u8g2.drawStr(4, 54, "T: ");
-  u8g2.drawStr(4 + u8g2.getStrWidth("T: "), 54, buf);
+  u8g2.drawStr(4, 54, "Temp: ");
+  u8g2.drawStr(4 + u8g2.getStrWidth("Temp: "), 54, buf);
 
   // --- Shot time ---
   unsigned long s = shotMs / 1000;
   unsigned long ms = (shotMs % 1000) / 10;
-  snprintf(buf, sizeof(buf), "Time: %lu.%02lus", s, ms);  // safe, no floats
+  snprintf(buf, sizeof(buf), "T: %lu.%02lus", s, ms);  // safe, no floats
   u8g2.drawStr(76, 36, buf);
 
   u8g2.sendBuffer();
