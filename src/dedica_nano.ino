@@ -24,9 +24,10 @@ const float BETA = 3950.0;
 const float TEMP_IIR_ALPHA = 0.12;
 
 // Shot detection
-const float SHOT_START_BAR = 4.0;
-const float SHOT_END_BAR = 4.0;
-const unsigned long SHOT_END_HYST_MS = 700;
+const float SHOT_START_BAR = 4.5;
+const float SHOT_END_BAR = 3.5;
+const unsigned long SHOT_END_HYST_MS = 1500;
+const unsigned long MIN_SHOT_TIME_MS = 7000;
 
 // Sparkline
 #define SPARK_SAMPLES 64
@@ -129,14 +130,14 @@ void drawPostShotScreen(uint8_t peak, uint16_t sum, unsigned int samples, float 
   char buf[16];
 
   // --- Peak pressure ---
-  float peakF = peak / 10.0;
+  float peakF = peak;
   dtostrf(peakF, 4, 1, buf);       // float → string
   u8g2.setFont(u8g2_font_ncenB08_tr);
   u8g2.drawStr(4, 18, "Peak: ");
   u8g2.drawStr(4 + u8g2.getStrWidth("Peak: "), 18, buf);
 
   // --- Average pressure ---
-  float avgF = (sum / (float)samples) / 10.0;
+  float avgF = (sum / (float)samples);
   dtostrf(avgF, 4, 1, buf);
   u8g2.drawStr(4, 36, "Avg: ");
   u8g2.drawStr(4 + u8g2.getStrWidth("Avg: "), 36, buf);
@@ -181,16 +182,16 @@ void loop() {
 
   unsigned long now=millis();
   if(!in_shot){
-    if(bar>=SHOT_START_BAR){
+    if(bar >= SHOT_START_BAR){
       in_shot=true; shot_start_ms=now;
       peak_bar=bar; sum_bar=bar; shot_samples=1;
     }
   }else{ 
-    if(bar>peak_bar) peak_bar=bar;
+    if(bar > peak_bar) peak_bar=bar;
     sum_bar+=bar; shot_samples++;
-    if(bar<SHOT_END_BAR){
+    if(bar < SHOT_END_BAR && (now - shot_start_ms) > MIN_SHOT_TIME_MS) {
       if(last_below_ms==0) last_below_ms=now;
-      else if(now-last_below_ms>=SHOT_END_HYST_MS){
+      else if(now - last_below_ms >= SHOT_END_HYST_MS){
         unsigned long shot_len=now-shot_start_ms;
         in_shot=false; last_below_ms=0;
         drawPostShotScreen(peak_bar,sum_bar,shot_samples,temp_filtered,shot_len);
