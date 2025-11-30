@@ -27,7 +27,7 @@ const float TEMP_IIR_ALPHA = 0.12;
 // Shot detection
 const float SHOT_START_BAR = 4.0;
 const float SHOT_END_BAR = 7.0;
-const unsigned long SHOT_END_HYST_MS = 200;
+const unsigned long SHOT_END_HYST_MS = 700;
 
 // Sparkline
 #define SPARK_SAMPLES 64
