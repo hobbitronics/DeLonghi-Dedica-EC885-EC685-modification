@@ -21,12 +21,11 @@ const float T0_K = 298.15;
 const float BETA = 3950.0;
 
 // Averaging / smoothing
-const int PRESS_SAMPLES = 12;
 const float TEMP_IIR_ALPHA = 0.12;
 
 // Shot detection
 const float SHOT_START_BAR = 4.0;
-const float SHOT_END_BAR = 7.0;
+const float SHOT_END_BAR = 4.0;
 const unsigned long SHOT_END_HYST_MS = 700;
 
 // Sparkline
@@ -43,7 +42,8 @@ uint8_t peak_bar = 0;      // 0..160
 unsigned long sum_bar = 0; // sum in 0.1 bar units
 unsigned int shot_samples = 0;
 
-float readVoltage(uint8_t pin, int samples=12){
+float readVoltage(uint8_t pin){
+  int samples=4;
   long sum=0;
   for(int i=0;i<samples;i++) sum+=analogRead(pin);
   float avg = sum/(float)samples;
@@ -58,7 +58,7 @@ float pressureFromVoltage(float vin) {
 }
 
 float readThermC() {
-  float v = readVoltage(THERM_PIN, 16);  // or convert analogRead manually
+  float v = readVoltage(THERM_PIN);  // or convert analogRead manually
   float vcc = 4.98;                        // force 5V reference for now
   if (v <= 0.0001) return NAN;
 
@@ -165,7 +165,7 @@ void setup() {
 
 void loop() {
   
-  float vpress=readVoltage(PRESS_PIN,PRESS_SAMPLES);
+  float vpress=readVoltage(PRESS_PIN);
   // Serial.print("vpress ");
   // Serial.println(vpress);
 
