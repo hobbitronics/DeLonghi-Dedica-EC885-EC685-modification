@@ -1,5 +1,7 @@
 # Espresso Machine Display – Arduino Nano Project
 
+This is a fork of the original [CaiJonas/DeLonghi-Dedica-EC885-EC685-modification](https://github.com/CaiJonas/DeLonghi-Dedica-EC885-EC685-modification). I have added my own source code in `/src` but kept the original binary in place. Please note that contents of `/firmware` are not built from it.
+
 With this project, you can monitor and visualize the coffee brewing and extraction process by installing a pressure sensor and a temperature sensor. No modifications are made to the machine’s electronics — it is purely a non-invasive monitoring and display system shown on a small screen. This helps in determining the optimal grind size and coffee dose.
 
 For installation, you only need to disconnect the silicone hose between the thermoblock and the outlet. This hose is available as a spare part, so the machine can be fully restored to its original condition at any time. The display is designed in a way that no drilling is required — it uses the original mounting holes of the logo badge.
@@ -209,6 +211,7 @@ _Images of the mounted system go here_
 ## ⚖️ License
 This project is licensed for **private, non-commercial use only**.  
 See `LICENSE` for details or contact the author for other use cases.
+Source code that has been added is under a separate license in the `/src` directory.
 
 ---
 
