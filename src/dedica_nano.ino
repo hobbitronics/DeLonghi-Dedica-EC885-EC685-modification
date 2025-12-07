@@ -6,6 +6,7 @@
 // ---------- CONFIG ----------
 const uint8_t PRESS_PIN = A0;
 const uint8_t THERM_PIN = A1;
+const float vcc = 4.98; // 5V assumed; for 3.3V boards, change to 3.3
 
 U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* clock=*/SCL, /* data=*/SDA,
                                          /* reset=*/U8X8_PIN_NONE);
@@ -51,7 +52,7 @@ float readVoltage(uint8_t pin) {
   for (int i = 0; i < samples; i++)
     sum += analogRead(pin);
   float avg = sum / (float)samples;
-  return avg / 1023.0 * 5.0; // 5V assumed; for 3.3V boards, change to 3.3
+  return avg / 1023.0 * vcc;
 }
 
 float pressureFromVoltage(float vin) {
@@ -66,7 +67,6 @@ float pressureFromVoltage(float vin) {
 
 float readThermC() {
   float v = readVoltage(THERM_PIN); // or convert analogRead manually
-  float vcc = 4.98;                 // force 5V reference for now
   if (v <= 0.0001)
     return NAN;
 
