@@ -204,6 +204,7 @@ void loop() {
   addSpark((uint8_t)(bar * 10.0)); // if spark expects 0–160
 
   unsigned long now = millis();
+
   if (!in_shot) {
     if (bar >= SHOT_START_BAR) {
       in_shot = true;
@@ -211,30 +212,39 @@ void loop() {
       peak_bar = bar;
       sum_bar = bar;
       shot_samples = 1;
+      last_below_ms = 0;
     }
   } else {
     if (bar > peak_bar)
       peak_bar = bar;
     sum_bar += bar;
     shot_samples++;
-    bool meetsMinShotTime = (now - shot_start_ms) > MIN_SHOT_TIME_MS;
-    bool shotHasEnded = bar < SHOT_END_BAR && meetsMinShotTime;
-    if (shotHasEnded) {
-      if (last_below_ms == 0)
+
+    const bool meetsMinShotTime = (now - shot_start_ms) >= MIN_SHOT_TIME_MS;
+    const bool belowEndThreshold = (bar < SHOT_END_BAR);
+
+    if (belowEndThreshold && meetsMinShotTime) {
+      // Start hysteresis timer if first time dipping below
+      if (last_below_ms == 0) {
         last_below_ms = now;
-      else if (now - last_below_ms >= SHOT_END_HYST_MS) {
+      }
+      // If hyst period elapsed → end shot
+      else if ((now - last_below_ms) >= SHOT_END_HYST_MS) {
         unsigned long shot_len = now - shot_start_ms;
         in_shot = false;
         last_below_ms = 0;
         drawPostShotScreen(peak_bar, sum_bar, shot_samples, temp_filtered,
                            shot_len);
+        // Reset accumulators
         peak_bar = 0;
         sum_bar = 0;
         shot_samples = 0;
         delay(15000);
       }
-    } else
+    } else {
+      // Not continuously under threshold → reset hysteresis timer
       last_below_ms = 0;
+    }
   }
 
   drawLiveScreen(bar, temp_filtered, in_shot ? (now - shot_start_ms) : 0);
