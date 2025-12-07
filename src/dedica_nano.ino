@@ -145,7 +145,7 @@ void drawLiveScreen(float pressure, float tempC, unsigned long shotTimeMs) {
 void drawPostShotScreen(uint8_t peak, uint16_t sum, unsigned int samples,
                         float tempC, unsigned long shotMs) {
   u8g2.clearBuffer();
-  char buf[16];
+  char buf[17];
 
   // --- Peak pressure ---
   float peakF = peak;
