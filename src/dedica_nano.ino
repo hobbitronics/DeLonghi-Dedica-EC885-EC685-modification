@@ -30,7 +30,8 @@ const float SHOT_END_BAR = 3.5;
 const unsigned long SHOT_END_HYST_MS = 1500;
 const unsigned long MIN_SHOT_TIME_MS = 7000;
 
-// Sparkline
+// Sparkline: a graph of the pressure over time, showing the general trend of
+// the shot.
 #define SPARK_SAMPLES 64
 uint8_t spark[SPARK_SAMPLES]; // 0..160
 uint8_t spark_idx = 0;
@@ -45,7 +46,7 @@ unsigned long sum_bar = 0; // sum in 0.1 bar units
 unsigned int shot_samples = 0;
 
 float readVoltage(uint8_t pin) {
-  int samples = 4;
+  int samples = 8;
   long sum = 0;
   for (int i = 0; i < samples; i++)
     sum += analogRead(pin);
@@ -133,7 +134,8 @@ void drawLiveScreen(float pressure, float tempC, unsigned long shotTimeMs) {
     int idx = (spark_idx + i) % SPARK_SAMPLES;
     float v = spark[idx];
     int x = gx + i * step;
-    int h = (int)((v - minv) / (maxv - minv) * 10);
+    float heightFraction = (v - minv) / (maxv - minv);
+    int h = (int)(heightFraction * 10);
     for (int y = 0; y < h; y++)
       u8g2.drawPixel(x, gy - y);
   }
@@ -215,7 +217,9 @@ void loop() {
       peak_bar = bar;
     sum_bar += bar;
     shot_samples++;
-    if (bar < SHOT_END_BAR && (now - shot_start_ms) > MIN_SHOT_TIME_MS) {
+    bool meetsMinShotTime = (now - shot_start_ms) > MIN_SHOT_TIME_MS;
+    bool shotHasEnded = bar < SHOT_END_BAR && meetsMinShotTime;
+    if (shotHasEnded) {
       if (last_below_ms == 0)
         last_below_ms = now;
       else if (now - last_below_ms >= SHOT_END_HYST_MS) {
