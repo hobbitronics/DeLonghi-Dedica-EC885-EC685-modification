@@ -8,7 +8,7 @@ const uint8_t PRESS_PIN = A0;
 const uint8_t THERM_PIN = A1;
 const float vcc = 4.98; // 5V assumed; for 3.3V boards, change to 3.3
 
-U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* clock=*/SCL, /* data=*/SDA,
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* clock=*/SCL, /* data=*/SDA,
                                          /* reset=*/U8X8_PIN_NONE);
 
 // Sensor mapping (0.5V -> 0 bar ; 4.5V -> 16 bar)
@@ -253,5 +253,5 @@ void loop() {
   }
 
   drawLiveScreen(bar, temp_filtered, in_shot ? (now - shot_start_ms) : 0);
-  delay(120);
+  delay(100);
 }
