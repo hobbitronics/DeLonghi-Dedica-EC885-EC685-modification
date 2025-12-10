@@ -28,7 +28,7 @@ const float TEMP_IIR_ALPHA = 0.12;
 // Shot detection
 const float SHOT_START_BAR = 4.5;
 const float SHOT_END_BAR = 3.5;
-const unsigned long SHOT_END_HYST_MS = 1500;
+const unsigned long SHOT_END_HYST_MS = 200;
 const unsigned long MIN_SHOT_TIME_MS = 7000;
 
 // Sparkline: a graph of the pressure over time, showing the general trend of
@@ -99,17 +99,22 @@ void drawLiveScreen(float pressure, float tempC, unsigned long shotTimeMs) {
   u8g2.setFont(u8g2_font_ncenB08_tr);
   u8g2.drawStr((128 - pw) / 2 + pw + 2, 34, "bar");
 
-  // Temperature
+  // ---- Temperature (right-aligned) ----
   char tbuf[8];
-  dtostrf(tempC, 4, 1, tbuf); // convert float to string (width 4, 1 decimal)
-  u8g2.drawStr(98, 10, tbuf);
-  u8g2.drawStr(98 + u8g2.getStrWidth(tbuf) + 1, 10, "C");
+  dtostrf(tempC, 4, 1, tbuf);
+
+  int w_temp = u8g2.getStrWidth(tbuf);
+  int total_w = w_temp + 1 + u8g2.getStrWidth("C");
+  int x = 128 - total_w - 2; // 2px right margin
+
+  u8g2.drawStr(x, 10, tbuf);
+  u8g2.drawStr(x + w_temp + 1, 10, "C");
 
   // Shot timer
   unsigned long s = shotTimeMs / 1000;
-  unsigned long ms = (shotTimeMs % 1000) / 10;
+  unsigned long ds = (shotTimeMs % 1000) / 100; // deciseconds (0–9)
   char timebuf[12];
-  snprintf(timebuf, sizeof(timebuf), "%lu.%02lus", s, ms);
+  snprintf(timebuf, sizeof(timebuf), "%lu.%lus", s, ds);
   u8g2.drawStr(2, 10, timebuf);
 
   // Sparkline
