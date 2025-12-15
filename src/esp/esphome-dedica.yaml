@@ -1,0 +1,160 @@
+esphome:
+  name: esphome-dedica
+  friendly_name: Dedica Mod
+  min_version: 2025.5.0
+  name_add_mac_suffix: false
+
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+# Allow Over-The-Air updates
+ota:
+- platform: esphome
+
+wifi:
+  ssid: "your wifi here"
+  password: "your password here"
+  # use_address: 192.168.1.123
+
+i2c:
+  sda: 16
+  scl: 17
+  scan: true
+
+font:
+  - file: "gfonts://Roboto"
+    id: font_big
+    size: 28
+  - file: "gfonts://Roboto"
+    id: font_small
+    size: 12
+
+display:
+  - platform: ssd1306_i2c
+    id: oled
+    model: "SSD1306 128x64"
+    address: 0x3C
+    lambda: |-
+      char buf[16];
+
+      float bar = id(pressure_bar).state;
+      float temp = id(temp_c).state;
+
+      // Big pressure
+      snprintf(buf, sizeof(buf), "%.1f bar", bar);
+      it.print(64, 22, id(font_big), TextAlign::CENTER, buf);
+
+      // Temperature
+      snprintf(buf, sizeof(buf), "%.1f C", temp);
+      it.print(64, 52, id(font_small), TextAlign::CENTER, buf);
+
+      // Shot timer
+      if (id(in_shot)) {
+        uint32_t t = (millis() - id(shot_start_ms)) / 1000;
+        snprintf(buf, sizeof(buf), "%lus", t);
+        it.print(2, 10, id(font_small), buf);
+      }
+
+sensor:
+  # Pressure ADC (scaled to volts)
+  - platform: adc
+    pin: 34
+    id: pressure_adc
+    attenuation: 12db
+    update_interval: 100ms
+    filters:
+      - multiply: 3.3
+
+  # Voltage → Bar (0-16 bar, 0.5-4.5 V but 3v sensor recommended)
+  - platform: template
+    id: pressure_bar
+    unit_of_measurement: "bar"
+    update_interval: 100ms
+    lambda: |-
+      const float DIVIDER_RATIO = 0.733;  // 10k / (10k + 18k)
+      float v = id(pressure_adc).state / DIVIDER_RATIO;
+
+      if (v <= 0.5) return 0.0;
+      if (v >= 4.5) return 16.0;
+      return (v - 0.5) / 4.0 * 16.0;
+
+
+  # Thermistor ADC
+  - platform: adc
+    pin: 35
+    id: therm_adc
+    attenuation: 12db
+    update_interval: 500ms
+
+  - platform: resistance
+    id: therm_res
+    sensor: therm_adc
+    configuration: DOWNSTREAM
+    resistor: 100kΩ
+
+  - platform: ntc
+    id: temp_c
+    sensor: therm_res
+    calibration:
+      b_constant: 3950
+      reference_temperature: 25°C
+      reference_resistance: 100kΩ
+
+# -----------------------
+# RobotDyn AC Dimmer
+# -----------------------
+output:
+  - platform: ac_dimmer
+    id: pump_dimmer
+    gate_pin: 26
+    zero_cross_pin:
+      number: 25
+      inverted: true
+    min_power: 0.05
+    max_power: 1.00
+
+fan:
+  - platform: speed
+    output: pump_dimmer
+    name: "Pump Power"
+
+# -----------------------
+# Shot detection globals
+# -----------------------
+globals:
+  - id: in_shot
+    type: bool
+    initial_value: "false"
+
+  - id: shot_start_ms
+    type: uint32_t
+    initial_value: "0"
+
+# -----------------------
+# Shot logic loop
+# -----------------------
+interval:
+  - interval: 100ms
+    then:
+      - lambda: |-
+          float bar = id(pressure_bar).state;
+          uint32_t now = millis();
+
+          if (!id(in_shot)) {
+            if (bar >= 4.5) {
+              id(in_shot) = true;
+              id(shot_start_ms) = now;
+            }
+          } else {
+            if (bar < 3.5 && (now - id(shot_start_ms)) > 7000) {
+              id(in_shot) = false;
+            }
+          }
