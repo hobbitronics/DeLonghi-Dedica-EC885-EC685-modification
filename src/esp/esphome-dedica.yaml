@@ -69,23 +69,28 @@ sensor:
     pin: 34
     id: pressure_adc
     attenuation: 12db
-    update_interval: 100ms
+    update_interval: 50ms
     filters:
       - multiply: 3.3
+      # Undo divider (10k / 22k)
+      - multiply: 1.455
+      # Exponential smoothing
+      - exponential_moving_average:
+          alpha: 0.2
+          send_every: 1
 
   # Voltage → Bar (0-16 bar, 0.5-4.5 V but 3v sensor recommended)
   - platform: template
     id: pressure_bar
     unit_of_measurement: "bar"
-    update_interval: 100ms
+    accuracy_decimals: 1
+    update_interval: 50ms
     lambda: |-
-      const float DIVIDER_RATIO = 0.733;  // 10k / (10k + 18k)
-      float v = id(pressure_adc).state / DIVIDER_RATIO;
+      float v = id(pressure_adc).state;
 
       if (v <= 0.5) return 0.0;
       if (v >= 4.5) return 16.0;
-      return (v - 0.5) / 4.0 * 16.0;
-
+      return (v - 0.5) * 4.0;
 
   # Thermistor ADC
   - platform: adc
