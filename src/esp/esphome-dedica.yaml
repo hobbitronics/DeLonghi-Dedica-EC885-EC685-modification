@@ -108,10 +108,16 @@ sensor:
   - platform: ntc
     id: temp_c
     sensor: therm_res
+    unit_of_measurement: "°C"
+    accuracy_decimals: 1
     calibration:
       b_constant: 3950
       reference_temperature: 25°C
       reference_resistance: 100kΩ
+    filters:
+      - exponential_moving_average:
+          alpha: 0.2
+          send_every: 1
 
 # -----------------------
 # RobotDyn AC Dimmer
